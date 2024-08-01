@@ -573,4 +573,14 @@ footer a:hover {
   font-weight: 900;
   margin-right: 10px;
 }
+
+.page-register .section-title span {
+  background-color: #fff;
+}
 /* Product page */
+
+label.required::before {
+  content: "* ";
+  color: var(--bs-form-invalid-color);
+  font-weight: bold;
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E-shop :: Login</title>
+    <title>E-shop :: Checkout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -264,23 +264,6 @@
                     <a href="#" class="btn btn-outline-warning">Cart</a>
                     <a href="#" class="btn btn-outline-secondary">Checkout</a>
                 </div>
-
-                <div class="dropdown mt-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        Dropdown button
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item closecart" href="#footer" data-href="footer">Footer</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item closecart" href="#about" data-href="about">About</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item closecart" href="#map" data-href="map">Map</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 
@@ -292,54 +275,143 @@
                         <nav class="breadcrumbs">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li><span>Login</span></li>
+                                <li><span>Checkout</span></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
             </div>
 
-            <div class="container-fluid mb-3">
-                <div class="row">
-                    <div class="col-12">
+            <div class="container-fluid">
 
-                        <div class="page-register bg-white p-3">
-                            <h1 class="section-title h3"><span>Login</span></h1>
+                <form action="" class="needs-validation" novalidate>
 
-                            <div class="row">
-                                <div class="col-md-6 offset-md-3">
-                                    <form action="" class="needs-validation" novalidate>
+                    <div class="row">
 
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label required">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Email"
-                                                required>
-                                            <div class="invalid-feedback">
-                                                Please, provide a valid email
-                                            </div>
-                                        </div>
+                        <div class="col-lg-8 mb-3">
+                            <div class="Checkout p-3 h-100 bg-white">
 
-                                        <div class="mb-3">
-                                            <label for="password" class="form-label required">Password</label>
-                                            <input type="password" class="form-control" id="password"
-                                                placeholder="Password" required>
-                                            <div class="invalid-feedback">
-                                                Password is required
-                                            </div>
-                                        </div>
+                                <h1 class="section-title h5"><span>Billing address</span></h1>
 
-                                        <div class="mb-3">
-                                            <button type="submit" class="btn btn-warning">Login</button>
-                                        </div>
+                                <div class="row g-3">
 
-                                    </form>
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" id="name" name="name" class="form-control"
+                                            placeholder="John Doe" aria-label="Name" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="doe@mail.com" aria-label="Email" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input type="tel" name="phone" id="phone" class="form-control"
+                                            placeholder="+123456789" aria-label="Phone" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="country" class="form-label">Country</label>
+                                        <select id="country" name="country" class="form-select" aria-label="Country"
+                                            required></select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="city" class="form-label">City</label>
+                                        <input type="text" name="city" id="city" class="form-control"
+                                            placeholder="City name" aria-label="City" required>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" name="address" id="address" class="form-control"
+                                            placeholder="Street, house num, flat num" aria-label="Address" required>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="comment" class="form-label">Comment</label>
+                                        <textarea class="form-control" name="comment" id="comment" rows="3"
+                                            placeholder="Order note..."></textarea>
+                                    </div>
+
                                 </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-3">
+
+                            <div class="cart-summary p-3 sidebar h-100">
+                                <h5 class="section-title"><span>Order total</span></h5>
+
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th class="text-end">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Product 1 Lorem ipsum dolor, sit amet consectetur adipisicing.
+                                                    <small>($65) x 1</small>
+                                                </td>
+                                                <td class="text-end">$65</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Product 2 <small>($80) x 2</small>
+                                                </td>
+                                                <td class="text-end">$160</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Product 3 <small>($100) x 1</small>
+                                                </td>
+                                                <td class="text-end">$100</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="2" class="text-end">$325</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+
+                                <div class="form-check">
+                                    <input name="payment-method" class="form-check-input" type="radio"
+                                        name="payment-method1" id="payment-method1" value="payment-method1" required>
+                                    <label class="form-check-label" for="payment-method1">
+                                        Card payment
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input name="payment-method" class="form-check-input" type="radio"
+                                        name="payment-method2" id="payment-method2" value="payment-method2" required>
+                                    <label class="form-check-label" for="payment-method2">
+                                        Payment on delivery
+                                    </label>
+                                </div>
+
+                                <div class="d-grid mt-3">
+                                    <button type="submit" class="btn btn-warning">Checkout</button>
+                                </div>
+
                             </div>
 
                         </div>
 
                     </div>
-                </div>
+
+                </form>
+
             </div>
 
         </main>
@@ -394,6 +466,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/owlcarousel/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        fetch('/assets/js/countries.json')
+            .then((res) => res.json())
+            .then((json) => {
+                let html = '';
+                json['countries'].forEach((el) => {
+                    html += `<option value="${el.code}">${el.name}</option>`;
+                });
+                document.getElementById('country').innerHTML = html;
+            });
+    </script>
 </body>
 
 </html>
